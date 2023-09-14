@@ -1,0 +1,9 @@
+
+javax.servlet servlet-api * * * *
+org.apache.maven.plugins maven-javadoc-plugin * * * *
+org.apache.maven.plugins maven-release-plugin * * * *
+org.apache.maven.plugins maven-source-plugin * * * *
+org.codehaus.mojo cobertura-maven-plugin * * * *
+org.codehaus.mojo findbugs-maven-plugin * * * *
+org.glassfish.copyright glassfish-copyright-maven-plugin * * * *
+org.glassfish.findbugs findbugs * * * *

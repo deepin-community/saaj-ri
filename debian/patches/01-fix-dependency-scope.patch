@@ -1,0 +1,18 @@
+Description: Fixes the scope of the dependencies
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: no
+--- a/saaj-ri/pom.xml
++++ b/saaj-ri/pom.xml
+@@ -476,10 +476,12 @@
+         <dependency>
+             <groupId>junit</groupId>
+             <artifactId>junit</artifactId>
++            <scope>test</scope>
+         </dependency>
+         <dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>servlet-api</artifactId>
++            <scope>test</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.jvnet.staxex</groupId>

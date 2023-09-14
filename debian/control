@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: saaj-ri
+Section: java
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Emmanuel Bourg <ebourg@apache.org>
+Build-Depends:
+ debhelper (>= 11),
+ default-jdk,
+ junit (>= 3.8.2),
+ libmaven-dependency-plugin-java (>= 3.1.1),
+ libmimepull-java (>= 1.9.7),
+ libsaaj-java (>= 1.4.0),
+ libservlet3.1-java,
+ libstax-ex-java (>= 1.7.8),
+ maven-debian-helper (>= 2.1)
+Standards-Version: 4.2.0
+Vcs-Git: https://salsa.debian.org/java-team/saaj-ri.git
+Vcs-Browser: https://salsa.debian.org/java-team/saaj-ri
+Homepage: https://javaee.github.io/metro-saaj/
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libsaaj-ri-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Suggests: ${maven:OptionalDepends}
+Description: SOAP with Attachments API for Java - Reference Implementation
+ The SOAP with Attachments API for Java (SAAJ) provides the API for creating
+ and sending SOAP messages by means of the javax.xml.soap package. It is used
+ for the SOAP messaging that goes on behind the scenes in JAX-WS, JAX-RPC,
+ and JAXR implementations. SOAP Handlers in JAX-WS use SAAJ APIs to access
+ the SOAP Message. Developers can also use it to write SOAP messaging
+ applications directly instead of using JAX-WS/JAX-RPC.
